@@ -34,7 +34,7 @@ public class LibraryTest {
         int[] arr = Library.roll(5);
 //
 //        boolean expected = true;
-        assertTrue("inserted value into middle of array",  Library.containsDuplicates(arr));
+        assertTrue("checking for duplicate dice rolls",  Library.containsDuplicates(arr));
 
 
     }
@@ -52,7 +52,7 @@ int[][] weeklyMonthTemperatures = {
 };
  int expects =  57 ;
 
-        assertEquals("inserted value into middle of array", expects,  Library.averageCount(weeklyMonthTemperatures));
+        assertEquals("finding lowest average of temps", expects,  Library.averageCount(weeklyMonthTemperatures));
 
 
     }
