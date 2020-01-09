@@ -68,7 +68,7 @@ public class LibraryTest {
     @Test public void testTemperatures() {
 
         assertEquals("missing temps:63missing temps:67missing temps:68missing temps:69", Library.temperatures());
-        Library.tally();
+
 
     }
 
@@ -86,9 +86,7 @@ public class LibraryTest {
 
         assertEquals("Bush", Library.tally(votes));
 
-
     }
-
 }
 
 
