@@ -4,6 +4,10 @@
 package basiclibrary;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 //import static org.junit.Assert.assertTrue;
 
@@ -21,6 +25,7 @@ public class LibraryTest {
             } else {
                 test = false;
                 break;
+
             }
             // boolean expected = true
 
@@ -44,24 +49,44 @@ public class LibraryTest {
     @Test public void testAverageCount() {
 
 
-int[][] weeklyMonthTemperatures = {
-  {66, 64, 58, 65, 71, 57, 60},
-  {57, 65, 65, 70, 72, 65, 51},
-  {55, 54, 60, 53, 59, 57, 61},
-  {65, 56, 55, 52, 55, 62, 57}
-};
- int expects =  57 ;
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+        int expects = 57;
 
-        assertEquals("finding lowest average of temps", expects,  Library.averageCount(weeklyMonthTemperatures));
+        assertEquals("finding lowest average of temps", expects, Library.averageCount(weeklyMonthTemperatures));
+
 
 
     }
 
 
 
+    @Test public void testTemperatures() {
+
+        assertEquals("missing temps:63missing temps:67missing temps:68missing temps:69", Library.temperatures());
 
 
+    }
 
+    @Test public void testTally() {
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+
+        assertEquals("Bush", Library.tally(votes));
+
+    }
 }
 
 
